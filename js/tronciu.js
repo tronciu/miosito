@@ -101,3 +101,4 @@ if (contactForm) {
     window.location.href = `mailto:tronciu.trade@gmail.com?subject=${subject}&body=${body}`;
   });
 }
+
