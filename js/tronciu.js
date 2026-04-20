@@ -98,6 +98,6 @@ if (contactForm) {
 
     const subject = encodeURIComponent('Richiesta consulenza sito web');
     const body = encodeURIComponent(buildMessage());
-    window.location.href = `mailto:info@webstudio.it?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:tronciu.trade@gmail.com?subject=${subject}&body=${body}`;
   });
 }
