@@ -1044,7 +1044,7 @@ body.preload.entered .site-shell {
   }
 
   .hero-visual {
-    height: 214px;
+    display: none;
   }
 
   .monitor-screen {
