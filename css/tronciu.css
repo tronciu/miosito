@@ -129,6 +129,32 @@ body.preload.entered .site-shell {
   gap: 12px;
 }
 
+.nav-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(14, 165, 233, 0.28);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.74);
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 99px;
+  background: #0f172a;
+  transition: transform 0.24s ease, opacity 0.2s ease;
+}
+
+.nav-toggle span + span {
+  margin-top: 4px;
+}
+
 .nav a {
   text-decoration: none;
   color: var(--text);
@@ -772,9 +798,10 @@ body.preload.entered .site-shell {
   }
 
   .nav-wrap {
-    flex-direction: column;
-    padding: 14px 0 16px;
-    gap: 10px;
+    min-height: auto;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    gap: 8px 12px;
   }
 
   .hero-grid {
@@ -865,19 +892,60 @@ body.preload.entered .site-shell {
     letter-spacing: 0.2px;
   }
 
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
   .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 14px;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    margin-top: 0;
+    padding: 0 4px;
+    transition:
+      max-height 0.32s ease,
+      opacity 0.22s ease,
+      transform 0.28s ease,
+      margin-top 0.24s ease;
+  }
+
+  body.nav-open .nav {
+    max-height: 380px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    margin-top: 8px;
   }
 
   .nav a {
+    display: block;
+    width: 100%;
     font-size: 15px;
-    padding: 6px 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
   }
 
   .nav a.phone {
     display: none;
+  }
+
+  body.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  body.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .btn {
@@ -957,10 +1025,6 @@ body.preload.entered .site-shell {
 
   .logo-text {
     font-size: 18px;
-  }
-
-  .nav {
-    gap: 6px 10px;
   }
 
   .nav a {

@@ -29,6 +29,45 @@ onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);
 
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav');
+
+if (navToggle && navMenu) {
+  const closeMenu = () => {
+    document.body.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  const openMenu = () => {
+    document.body.classList.add('nav-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  };
+
+  navToggle.addEventListener('click', () => {
+    if (document.body.classList.contains('nav-open')) {
+      closeMenu();
+      return;
+    }
+    openMenu();
+  });
+
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
+    }
+  });
+}
+
 const revealTargets = document.querySelectorAll(
   '.hero, .services, .cta, .contact, .features .card, .service-grid .card, .about-hero, .about-body, .about-side, .about-card, .about-step, .about-cta, main > .card'
 );
@@ -101,4 +140,3 @@ if (contactForm) {
     window.location.href = `mailto:tronciu.trade@gmail.com?subject=${subject}&body=${body}`;
   });
 }
-
