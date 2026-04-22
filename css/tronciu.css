@@ -28,9 +28,9 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 6% 18%, rgba(233, 236, 239, 0.16), transparent 37%),
-    radial-gradient(circle at 92% 84%, rgba(206, 212, 218, 0.14), transparent 39%),
-    linear-gradient(150deg, #212529 0%, #343a40 48%, #495057 100%);
+    radial-gradient(circle at 8% 14%, rgba(248, 249, 250, 0.28), transparent 36%),
+    radial-gradient(circle at 86% 82%, rgba(233, 236, 239, 0.2), transparent 40%),
+    linear-gradient(150deg, #343a40 0%, #495057 48%, #6c757d 100%);
   --hero-progress: 0;
   --page-progress: 0;
 }
@@ -49,7 +49,7 @@ h4 {
 }
 
 .topbar {
-  background: linear-gradient(140deg, rgba(33, 37, 41, 0.74), rgba(52, 58, 64, 0.66));
+  background: linear-gradient(140deg, rgba(52, 58, 64, 0.68), rgba(108, 117, 125, 0.5));
   border-bottom: 1px solid rgba(206, 212, 218, 0.32);
   position: sticky;
   top: 0;
@@ -198,20 +198,20 @@ body.preload.entered .site-shell {
   border-radius: 999px;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   border: 1px solid transparent;
-  background: rgba(248, 249, 250, 0.04);
+  background: rgba(248, 249, 250, 0.1);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
 
 .nav a:hover {
   border-color: rgba(206, 212, 218, 0.4);
-  background: rgba(206, 212, 218, 0.14);
+  background: rgba(248, 249, 250, 0.22);
   color: var(--white);
 }
 
 .nav a.active {
   border-color: rgba(206, 212, 218, 0.5);
-  background: rgba(206, 212, 218, 0.22);
+  background: rgba(248, 249, 250, 0.3);
   color: var(--white);
 }
 
@@ -289,7 +289,7 @@ body.preload.entered .site-shell {
   background:
     radial-gradient(circle at 80% 15%, rgba(206, 212, 218, 0.2) 0 10px, transparent 12px),
     radial-gradient(circle at 16% 72%, rgba(248, 250, 252, 0.14) 0 10px, transparent 12px),
-    linear-gradient(160deg, rgba(33, 37, 41, 0.84), rgba(73, 80, 87, 0.62));
+    linear-gradient(160deg, rgba(73, 80, 87, 0.68), rgba(173, 181, 189, 0.42));
   border: 1px solid rgba(206, 212, 218, 0.4);
   box-shadow: var(--shadow);
   position: relative;
@@ -409,8 +409,8 @@ body.preload.entered .site-shell {
 }
 
 .card {
-  background: linear-gradient(170deg, rgba(33, 37, 41, 0.88) 0%, rgba(52, 58, 64, 0.76) 100%);
-  border: 1px solid var(--line-soft);
+  background: linear-gradient(170deg, rgba(73, 80, 87, 0.72) 0%, rgba(173, 181, 189, 0.44) 100%);
+  border: 1px solid rgba(248, 249, 250, 0.22);
   border-radius: 20px;
   padding: 30px;
   box-shadow: var(--shadow);
@@ -541,7 +541,7 @@ body.preload.entered .site-shell {
 
 .contact-form,
 .contact-actions {
-  background: linear-gradient(165deg, rgba(33, 37, 41, 0.76), rgba(52, 58, 64, 0.68));
+  background: linear-gradient(165deg, rgba(73, 80, 87, 0.72), rgba(173, 181, 189, 0.42));
 }
 
 .contact-form {
@@ -564,7 +564,7 @@ body.preload.entered .site-shell {
   font-family: inherit;
   font-size: 15px;
   color: var(--white);
-  background: rgba(33, 37, 41, 0.9);
+  background: rgba(52, 58, 64, 0.62);
 }
 
 .contact-form textarea {
@@ -636,7 +636,7 @@ body.preload.entered .site-shell {
 }
 
 .about-hero {
-  background: linear-gradient(145deg, rgba(33, 37, 41, 0.74), rgba(73, 80, 87, 0.62));
+  background: linear-gradient(145deg, rgba(73, 80, 87, 0.68), rgba(173, 181, 189, 0.4));
   border-color: rgba(206, 212, 218, 0.36);
 }
 
@@ -742,7 +742,7 @@ body.preload.entered .site-shell {
 }
 
 .about-step {
-  background: linear-gradient(170deg, rgba(33, 37, 41, 0.74), rgba(73, 80, 87, 0.58));
+  background: linear-gradient(170deg, rgba(73, 80, 87, 0.68), rgba(173, 181, 189, 0.4));
 }
 
 .about-step .num {
@@ -792,7 +792,7 @@ body.preload.entered .site-shell {
 .site-footer {
   width: 100%;
   margin-top: 56px;
-  background: linear-gradient(160deg, #212529, #343a40);
+  background: linear-gradient(160deg, #343a40, #495057);
   border-top: 1px solid rgba(206, 212, 218, 0.28);
 }
 
@@ -855,9 +855,9 @@ body.preload.entered .site-shell {
 @media (max-width: 900px) {
   body {
     background:
-      radial-gradient(circle at 22% 8%, rgba(206, 212, 218, 0.22), transparent 45%),
-      radial-gradient(circle at 84% 78%, rgba(206, 212, 218, 0.14), transparent 45%),
-      linear-gradient(155deg, #212529 0%, #343a40 45%, #495057 100%);
+      radial-gradient(circle at 22% 8%, rgba(248, 249, 250, 0.24), transparent 45%),
+      radial-gradient(circle at 84% 78%, rgba(233, 236, 239, 0.16), transparent 45%),
+      linear-gradient(155deg, #343a40 0%, #495057 45%, #6c757d 100%);
   }
 
   .topbar::before {
@@ -1003,7 +1003,7 @@ body.preload.entered .site-shell {
     font-size: 15px;
     padding: 10px 12px;
     border-radius: 12px;
-    background: rgba(73, 80, 87, 0.36);
+    background: rgba(248, 249, 250, 0.14);
     border-color: rgba(233, 236, 239, 0.16);
   }
 
