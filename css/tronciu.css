@@ -455,7 +455,7 @@ body.preload.entered .site-shell {
 .card h3 {
   margin: 0 0 14px;
   font-size: 23px;
-  color: var(--white);
+  color: #e9ecef;
 }
 
 .card p {
@@ -553,7 +553,7 @@ body.preload.entered .site-shell {
 .contact-form label {
   font-size: 14px;
   font-weight: 700;
-  color: var(--white);
+  color: #e9ecef;
 }
 
 .contact-form input,
@@ -564,7 +564,7 @@ body.preload.entered .site-shell {
   padding: 12px 13px;
   font-family: inherit;
   font-size: 15px;
-  color: var(--white);
+  color: #e9ecef;
   background: rgba(73, 80, 87, 0.68);
 }
 
@@ -591,7 +591,7 @@ body.preload.entered .site-shell {
 .contact-actions h3 {
   margin: 0 0 12px;
   font-size: 28px;
-  color: var(--white);
+  color: #e9ecef;
 }
 
 .quick-link {
@@ -613,7 +613,7 @@ body.preload.entered .site-shell {
 
 .mail-link {
   background: linear-gradient(150deg, #6c757d, #495057);
-  color: var(--white);
+  color: #e9ecef;
   border-color: rgba(206, 212, 218, 0.32);
 }
 
@@ -623,7 +623,7 @@ body.preload.entered .site-shell {
 }
 
 .contact-actions p a {
-  color: var(--white);
+  color: #dee2e6;
   font-weight: 600;
   text-decoration: none;
 }
@@ -661,7 +661,7 @@ body.preload.entered .site-shell {
   margin: 0;
   font-size: 20px;
   line-height: 1.8;
-  color: rgba(248, 249, 250, 0.94);
+  color: #e9ecef;
   max-width: 62ch;
 }
 
@@ -676,14 +676,14 @@ body.preload.entered .site-shell {
   margin: 0 0 20px;
   font-size: 18px;
   line-height: 1.9;
-  color: rgba(248, 249, 250, 0.96);
+  color: #e9ecef;
 }
 
 .about-side h3,
 .about-block h3 {
   margin: 0 0 10px;
   font-size: 32px;
-  color: var(--white);
+  color: #dee2e6;
 }
 
 .about-list {
@@ -727,7 +727,7 @@ body.preload.entered .site-shell {
 .about-card h4 {
   margin: 0 0 6px;
   font-size: 26px;
-  color: var(--white);
+  color: #dee2e6;
 }
 
 .about-card p {
@@ -763,7 +763,7 @@ body.preload.entered .site-shell {
 .about-step h4 {
   margin: 0 0 6px;
   font-size: 23px;
-  color: var(--white);
+  color: #dee2e6;
 }
 
 .about-step p {
@@ -804,7 +804,7 @@ body.preload.entered .site-shell {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 34px;
-  color: var(--white);
+  color: #e9ecef;
   font-size: 15px;
 }
 
@@ -823,7 +823,7 @@ body.preload.entered .site-shell {
 }
 
 .footer-col a:hover {
-  color: var(--white);
+  color: #f8f9fa;
 }
 
 .footer-copy {
