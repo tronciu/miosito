@@ -109,7 +109,7 @@ if (contactForm) {
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
     return [
-      'Ciao, vorrei una consulenza per il mio sito.',
+      'Ciao, vorrei una consulenza per realizzare un sito web premium.',
       name ? `Nome: ${name}` : '',
       email ? `Email: ${email}` : '',
       message ? `Messaggio: ${message}` : '',
@@ -135,7 +135,7 @@ if (contactForm) {
     event.preventDefault();
     if (!contactForm.reportValidity()) return;
 
-    const subject = encodeURIComponent('Richiesta consulenza sito web');
+    const subject = encodeURIComponent('Richiesta consulenza sito web premium');
     const body = encodeURIComponent(buildMessage());
     window.location.href = `mailto:tronciu.trade@gmail.com?subject=${subject}&body=${body}`;
   });
