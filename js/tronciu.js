@@ -46,15 +46,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav');
 const themeToggle = document.querySelector('#theme-toggle');
-const themeLabel = themeToggle ? themeToggle.querySelector('.theme-label') : null;
+const heroDeviceWrap = document.querySelector('.hero-device-wrap');
+const heroDevice = heroDeviceWrap
+  ? heroDeviceWrap.querySelector('.hero-device')
+  : null;
 
 const applyTheme = (theme) => {
   document.body.setAttribute('data-theme', theme);
   if (!themeToggle) return;
   const isDark = theme === 'dark';
-  if (themeLabel) {
-    themeLabel.textContent = isDark ? 'DARK' : 'LIGHT';
-  }
   themeToggle.setAttribute('aria-pressed', String(isDark));
   themeToggle.setAttribute(
     'aria-label',
@@ -76,6 +76,32 @@ if (themeToggle) {
     applyTheme(next);
     window.localStorage.setItem('theme-preference', next);
   });
+}
+
+if (heroDeviceWrap && heroDevice) {
+  const resetPhone = () => {
+    heroDevice.style.setProperty('--phone-x', '0px');
+    heroDevice.style.setProperty('--phone-y', '0px');
+    heroDevice.style.setProperty('--phone-rx', '0deg');
+    heroDevice.style.setProperty('--phone-ry', '0deg');
+  };
+
+  heroDeviceWrap.addEventListener('mousemove', (event) => {
+    const rect = heroDeviceWrap.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const normX = clamp((event.clientX - centerX) / (rect.width / 2), -1, 1);
+    const normY = clamp((event.clientY - centerY) / (rect.height / 2), -1, 1);
+
+    // Move opposite to cursor point for an "indietro" feel.
+    heroDevice.style.setProperty('--phone-x', `${-normX * 14}px`);
+    heroDevice.style.setProperty('--phone-y', `${-normY * 10}px`);
+    heroDevice.style.setProperty('--phone-rx', `${normY * 6}deg`);
+    heroDevice.style.setProperty('--phone-ry', `${-normX * 7}deg`);
+  });
+
+  heroDeviceWrap.addEventListener('mouseleave', resetPhone);
+  heroDeviceWrap.addEventListener('blur', resetPhone, true);
 }
 
 if (navToggle && navMenu) {
