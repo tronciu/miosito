@@ -465,6 +465,17 @@ body.preload.entered .site-shell {
   line-height: 1.72;
 }
 
+/* Home squares: darker text for stronger contrast on light glass cards */
+.features .card h3,
+.service-grid .card h3 {
+  color: #212529;
+}
+
+.features .card p,
+.service-grid .card p {
+  color: #343a40;
+}
+
 .services {
   position: relative;
   text-align: center;
