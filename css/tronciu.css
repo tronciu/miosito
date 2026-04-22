@@ -664,8 +664,12 @@ body.preload.entered .site-shell {
 }
 
 .whatsapp-link {
-  background: linear-gradient(150deg, #3b82f6, #2563eb);
+  background: linear-gradient(150deg, #25d366, #128c7e);
   color: var(--white);
+}
+
+.whatsapp-link:hover {
+  background: linear-gradient(150deg, #1fbe5c, #0f7a6d);
 }
 
 .mail-link {
