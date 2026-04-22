@@ -46,12 +46,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav');
 const themeToggle = document.querySelector('#theme-toggle');
+const themeLabel = themeToggle ? themeToggle.querySelector('.theme-label') : null;
 
 const applyTheme = (theme) => {
   document.body.setAttribute('data-theme', theme);
   if (!themeToggle) return;
   const isDark = theme === 'dark';
-  themeToggle.textContent = isDark ? 'LIGHT MODE' : 'DARK MODE';
+  if (themeLabel) {
+    themeLabel.textContent = isDark ? 'DARK' : 'LIGHT';
+  }
   themeToggle.setAttribute('aria-pressed', String(isDark));
   themeToggle.setAttribute(
     'aria-label',
