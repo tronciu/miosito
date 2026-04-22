@@ -3,7 +3,7 @@
   --gold: #e9ecef;
   --gray: #6c757d;
   --white: #f8f9fa;
-  --ink: #f8f9fa;
+  --ink: #212529;
   --muted: #dee2e6;
   --glass: rgba(33, 37, 41, 0.78);
   --line: rgba(248, 249, 250, 0.52);
@@ -28,9 +28,10 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 8% 14%, rgba(248, 249, 250, 0.42), transparent 36%),
-    radial-gradient(circle at 86% 82%, rgba(248, 249, 250, 0.3), transparent 42%),
-    linear-gradient(150deg, #495057 0%, #6c757d 48%, #adb5bd 100%);
+    radial-gradient(circle at 50% -8%, rgba(255, 236, 207, 0.42), transparent 34%),
+    radial-gradient(circle at 18% 26%, rgba(244, 212, 242, 0.22), transparent 38%),
+    radial-gradient(circle at 84% 30%, rgba(255, 218, 196, 0.24), transparent 40%),
+    #f8f9fa;
   --hero-progress: 0;
   --page-progress: 0;
 }
@@ -122,7 +123,7 @@ body.preload.entered .site-shell {
   font-size: 30px;
   font-weight: 800;
   line-height: 1;
-  color: var(--gold);
+  color: #343a40;
   text-shadow: 0 0 20px rgba(206, 212, 218, 0.38);
 }
 
@@ -131,7 +132,7 @@ body.preload.entered .site-shell {
   font-weight: 700;
   font-size: 24px;
   line-height: 1;
-  color: var(--white);
+  color: #212529;
 }
 
 .nav {
@@ -206,13 +207,13 @@ body.preload.entered .site-shell {
 .nav a:hover {
   border-color: rgba(206, 212, 218, 0.4);
   background: rgba(248, 249, 250, 0.34);
-  color: var(--white);
+  color: #212529;
 }
 
 .nav a.active {
   border-color: rgba(206, 212, 218, 0.5);
   background: rgba(248, 249, 250, 0.42);
-  color: var(--white);
+  color: #212529;
 }
 
 .nav a.phone {
@@ -240,7 +241,7 @@ body.preload.entered .site-shell {
   font-size: clamp(31px, 4.9vw, 58px);
   line-height: 1.04;
   letter-spacing: -0.5px;
-  color: var(--white);
+  color: #212529;
   text-wrap: balance;
 }
 
@@ -248,7 +249,7 @@ body.preload.entered .site-shell {
   font-size: clamp(19px, 2.2vw, 26px);
   line-height: 1.5;
   margin: 30px 0 38px;
-  color: rgba(248, 249, 250, 0.94);
+  color: #495057;
   max-width: 24ch;
 }
 
@@ -280,7 +281,7 @@ body.preload.entered .site-shell {
   display: block;
   margin-top: 30px;
   font-size: 17px;
-  color: rgba(248, 249, 250, 0.9);
+  color: #6c757d;
 }
 
 .hero-visual {
@@ -478,13 +479,13 @@ body.preload.entered .site-shell {
   margin: 10px 0 4px;
   font-size: clamp(34px, 4.6vw, 56px);
   line-height: 1.07;
-  color: var(--white);
+  color: #212529;
 }
 
 .subtitle,
 .cta p {
   margin-top: 0;
-  color: rgba(248, 249, 250, 0.9);
+  color: #495057;
   font-size: clamp(18px, 2vw, 24px);
 }
 
@@ -499,14 +500,14 @@ body.preload.entered .site-shell {
 .more {
   display: inline-block;
   margin-top: 50px;
-  color: var(--gold);
+  color: #495057;
   font-weight: 700;
   text-decoration: none;
   font-size: 24px;
 }
 
 .more:hover {
-  color: #f8f9fa;
+  color: #212529;
 }
 
 .cta {
@@ -784,7 +785,7 @@ body.preload.entered .site-shell {
 
 .about-cta p {
   margin: 0 0 26px;
-  color: rgba(248, 249, 250, 0.94);
+  color: #495057;
   font-size: 20px;
   line-height: 1.8;
 }
@@ -855,9 +856,10 @@ body.preload.entered .site-shell {
 @media (max-width: 900px) {
   body {
     background:
-      radial-gradient(circle at 22% 8%, rgba(248, 249, 250, 0.34), transparent 45%),
-      radial-gradient(circle at 84% 78%, rgba(248, 249, 250, 0.24), transparent 45%),
-      linear-gradient(155deg, #495057 0%, #6c757d 45%, #adb5bd 100%);
+      radial-gradient(circle at 50% -6%, rgba(255, 236, 207, 0.36), transparent 35%),
+      radial-gradient(circle at 18% 20%, rgba(244, 212, 242, 0.18), transparent 40%),
+      radial-gradient(circle at 88% 26%, rgba(255, 218, 196, 0.2), transparent 42%),
+      #f8f9fa;
   }
 
   .topbar::before {
