@@ -227,9 +227,10 @@ body.preload.entered .site-shell {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 74px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   align-items: center;
+  justify-items: start;
 }
 
 .hero-copy {
@@ -252,7 +253,7 @@ body.preload.entered .site-shell {
   line-height: 1.5;
   margin: 30px 0 38px;
   color: #b3b3b3;
-  max-width: 24ch;
+  max-width: 42ch;
 }
 
 .btn {
