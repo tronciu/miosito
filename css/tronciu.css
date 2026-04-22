@@ -1,5 +1,5 @@
 :root {
-  --page-bg: #d7d7d7;
+  --page-bg: #ffffff;
   --canvas: #f3f3f3;
   --canvas-soft: #f7f7f7;
   --ink: #111111;
@@ -28,8 +28,8 @@ h1, h2, h3, h4 {
 }
 
 .site-shell {
-  width: min(1240px, 92vw);
-  margin: clamp(18px, 2.8vw, 34px) auto;
+  width: 100%;
+  margin: 0;
   background: linear-gradient(180deg, var(--canvas-soft), var(--canvas));
   position: relative;
   z-index: 1;
