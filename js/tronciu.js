@@ -45,6 +45,35 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav');
+const themeToggle = document.querySelector('#theme-toggle');
+
+const applyTheme = (theme) => {
+  document.body.setAttribute('data-theme', theme);
+  if (!themeToggle) return;
+  const isDark = theme === 'dark';
+  themeToggle.textContent = isDark ? 'LIGHT MODE' : 'DARK MODE';
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+  themeToggle.setAttribute(
+    'aria-label',
+    isDark ? 'Attiva tema chiaro' : 'Attiva tema scuro'
+  );
+};
+
+const savedTheme = window.localStorage.getItem('theme-preference');
+if (savedTheme === 'dark' || savedTheme === 'light') {
+  applyTheme(savedTheme);
+} else {
+  applyTheme('light');
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    window.localStorage.setItem('theme-preference', next);
+  });
+}
 
 if (navToggle && navMenu) {
   const closeMenu = () => {
