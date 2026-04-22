@@ -141,7 +141,7 @@ if (navToggle && navMenu) {
 }
 
 const revealTargets = document.querySelectorAll(
-  '.hero, .services, .cta, .contact, .features .card, .service-grid .card, .product-grid .card, .about-hero, .about-body, .about-side, .about-card, .about-step, .about-cta, main > .card'
+  '.hero, .services, .cta, .contact, .features .card, .service-grid .card, .about-hero, .about-body, .about-side, .about-card, .about-step, .about-cta, main > .card'
 );
 
 revealTargets.forEach((el) => el.classList.add('reveal'));
