@@ -94,10 +94,10 @@ if (heroDeviceWrap && heroDevice) {
     const normY = clamp((event.clientY - centerY) / (rect.height / 2), -1, 1);
 
     // Move opposite to cursor point for an "indietro" feel.
-    heroDevice.style.setProperty('--phone-x', `${-normX * 14}px`);
-    heroDevice.style.setProperty('--phone-y', `${-normY * 10}px`);
-    heroDevice.style.setProperty('--phone-rx', `${normY * 6}deg`);
-    heroDevice.style.setProperty('--phone-ry', `${-normX * 7}deg`);
+    heroDevice.style.setProperty('--phone-x', `${-normX * 24}px`);
+    heroDevice.style.setProperty('--phone-y', `${-normY * 18}px`);
+    heroDevice.style.setProperty('--phone-rx', `${normY * 10}deg`);
+    heroDevice.style.setProperty('--phone-ry', `${-normX * 12}deg`);
   });
 
   heroDeviceWrap.addEventListener('mouseleave', resetPhone);
@@ -141,7 +141,7 @@ if (navToggle && navMenu) {
 }
 
 const revealTargets = document.querySelectorAll(
-  '.hero, .services, .cta, .contact, .features .card, .service-grid .card, .about-hero, .about-body, .about-side, .about-card, .about-step, .about-cta, main > .card'
+  '.hero, .services, .cta, .contact, .features .card, .service-grid .card, .product-grid .card, .about-hero, .about-body, .about-side, .about-card, .about-step, .about-cta, main > .card'
 );
 
 revealTargets.forEach((el) => el.classList.add('reveal'));

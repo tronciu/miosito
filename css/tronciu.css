@@ -72,6 +72,33 @@ body {
   --page-progress: 0;
 }
 
+.dynamic-island {
+  display: none;
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 34px;
+  border-radius: 999px;
+  background: #040404;
+  z-index: 240;
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.46), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.dynamic-island__camera {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #3f4a7d 0%, #0a0d1b 65%, #020307 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
 h1, h2, h3, h4 {
   margin: 0;
   font-family: "Manrope", sans-serif;
@@ -331,31 +358,66 @@ body[data-theme="dark"] .theme-icon-moon {
   pointer-events: none;
 }
 
-.hero-grid { display: grid; grid-template-columns: 1fr; justify-items: center; position: relative; z-index: 1; }
+.hero-grid { display: grid; grid-template-columns: 1fr; position: relative; z-index: 1; }
 
-.hero-copy { text-align: center; max-width: 860px; transform: translateY(calc(var(--hero-progress) * -10px)); }
+.hero-media {
+  position: relative;
+  width: 100%;
+  min-height: clamp(420px, 56vw, 610px);
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+}
 
-.hero-kicker {
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: clamp(21px, 2.7vw, 34px);
-  color: var(--ink);
-  margin-bottom: 16px;
+  transform: scale(1.02);
 }
 
-.hero-copy h1 {
-  font-size: clamp(46px, 8.5vw, 92px);
-  line-height: 0.94;
-  color: var(--title);
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14px;
+  padding: clamp(24px, 5vw, 46px);
+  background:
+    linear-gradient(180deg, rgba(5, 8, 14, 0.06) 10%, rgba(5, 8, 14, 0.72) 68%, rgba(5, 8, 14, 0.9) 100%);
 }
 
-.hero-copy p {
-  margin: 22px auto 28px;
-  color: var(--text-body);
-  max-width: 56ch;
-  font-size: clamp(16px, 2.2vw, 21px);
-  line-height: 1.6;
+.hero-eyebrow {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero-overlay h1 {
+  font-size: clamp(40px, 7.2vw, 80px);
+  line-height: 0.95;
+  color: #ffffff;
+  max-width: 9ch;
+}
+
+.hero-overlay p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  max-width: 54ch;
+  font-size: clamp(15px, 2vw, 20px);
+  line-height: 1.55;
+}
+
+.hero-cta {
+  width: fit-content;
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0a0a0a;
 }
 
 .btn {
@@ -387,7 +449,7 @@ body[data-theme="dark"] .theme-icon-moon {
   height: clamp(230px, 30vw, 360px);
   display: grid;
   place-items: center;
-  perspective: 900px;
+  perspective: 1200px;
 }
 
 .hero-device-wrap::before {
@@ -424,7 +486,7 @@ body[data-theme="dark"] .theme-icon-moon {
     rotateX(var(--phone-rx))
     rotateY(var(--phone-ry));
   transform-style: preserve-3d;
-  transition: transform 0.28s cubic-bezier(0.22, 0.86, 0.25, 1);
+  transition: transform 0.22s cubic-bezier(0.22, 0.86, 0.25, 1);
   will-change: transform;
 }
 
@@ -483,10 +545,10 @@ body[data-theme="dark"] .services::before {
 }
 
 .services h2 {
-  font-size: clamp(52px, 7.2vw, 86px);
-  line-height: 0.95;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 0.98;
   color: var(--title);
-  max-width: 12ch;
+  max-width: 10ch;
   margin-bottom: 14px;
 }
 
@@ -503,6 +565,69 @@ body[data-theme="dark"] .services::before {
 }
 
 .service-grid { margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+.product-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.product-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.product-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #1e293b, #475569);
+}
+
+.product-thumb--1 {
+  background:
+    radial-gradient(circle at 24% 20%, rgba(255, 255, 255, 0.45), transparent 36%),
+    linear-gradient(145deg, #112544, #3b82f6);
+}
+
+.product-thumb--2 {
+  background:
+    radial-gradient(circle at 70% 22%, rgba(255, 255, 255, 0.45), transparent 34%),
+    linear-gradient(145deg, #231942, #7c3aed);
+}
+
+.product-thumb--3 {
+  background:
+    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.45), transparent 34%),
+    linear-gradient(145deg, #111827, #0ea5e9);
+}
+
+.product-thumb--4 {
+  background:
+    radial-gradient(circle at 72% 24%, rgba(255, 255, 255, 0.45), transparent 34%),
+    linear-gradient(145deg, #1f2937, #334155);
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--card-title);
+}
+
+.product-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--card-text);
+}
+
+.product-btn {
+  margin-top: 4px;
+  font-size: 12px;
+  padding: 10px 14px;
+}
 
 .card {
   background: var(--surface);
@@ -721,6 +846,10 @@ body[data-theme="dark"] .services::before {
   .hero { padding: 42px 0 30px; }
   .hero::after { height: 150px; filter: blur(16px); }
 
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .service-grid,
   .about-grid,
   .about-cards,
@@ -742,11 +871,27 @@ body[data-theme="dark"] .services::before {
 }
 
 @media (max-width: 600px) {
+  .dynamic-island {
+    display: block;
+  }
+
+  .topbar {
+    top: 10px;
+  }
+
+  .nav-wrap {
+    padding-top: 10px;
+  }
+
   .container { width: min(1120px, 94%); }
   .logo-image { width: 30px; height: 30px; border-radius: 7px; }
   .logo-text { font-size: 18px; }
-  .hero-copy h1 { font-size: clamp(36px, 14vw, 60px); }
-  .hero-copy p { font-size: 15px; }
-  .hero-kicker { font-size: 18px; }
+  .hero-overlay h1 { font-size: clamp(34px, 12vw, 52px); }
+  .hero-overlay p { font-size: 14px; max-width: 34ch; }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
   .subtitle, .cta p, .about-lead, .about-body p { font-size: 15px; line-height: 1.6; }
 }
