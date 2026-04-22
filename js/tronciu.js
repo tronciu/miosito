@@ -29,6 +29,20 @@ onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);
 
+// Smooth-scroll to in-page anchors without leaving hash fragments in the URL.
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (event) => {
+    const hash = anchor.getAttribute('href');
+    if (!hash || hash === '#') return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.history.replaceState(null, '', window.location.pathname);
+  });
+});
+
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav');
 
