@@ -4,14 +4,14 @@
   --gray: #6c757d;
   --white: #f8f9fa;
   --ink: #212529;
-  --muted: #dee2e6;
+  --muted: #ced4da;
   --glass: rgba(33, 37, 41, 0.78);
-  --line: rgba(248, 249, 250, 0.52);
-  --line-soft: rgba(248, 249, 250, 0.3);
+  --line: rgba(206, 212, 218, 0.62);
+  --line-soft: rgba(206, 212, 218, 0.42);
   --surface: rgba(33, 37, 41, 0.84);
   --surface-soft: rgba(73, 80, 87, 0.45);
-  --glass-edge: rgba(248, 249, 250, 0.28);
-  --glass-sheen: rgba(248, 249, 250, 0.22);
+  --glass-edge: rgba(206, 212, 218, 0.34);
+  --glass-sheen: rgba(206, 212, 218, 0.2);
   --shadow: 0 20px 45px rgba(2, 6, 23, 0.45);
 }
 
@@ -50,7 +50,7 @@ h4 {
 }
 
 .topbar {
-  background: linear-gradient(140deg, rgba(108, 117, 125, 0.58), rgba(173, 181, 189, 0.42));
+  background: linear-gradient(140deg, rgba(108, 117, 125, 0.72), rgba(173, 181, 189, 0.56));
   border-bottom: 1px solid rgba(206, 212, 218, 0.32);
   position: sticky;
   top: 0;
@@ -199,20 +199,20 @@ body.preload.entered .site-shell {
   border-radius: 999px;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   border: 1px solid transparent;
-  background: rgba(248, 249, 250, 0.18);
+  background: rgba(206, 212, 218, 0.24);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
 
 .nav a:hover {
   border-color: rgba(206, 212, 218, 0.4);
-  background: rgba(248, 249, 250, 0.34);
+  background: rgba(206, 212, 218, 0.38);
   color: #212529;
 }
 
 .nav a.active {
   border-color: rgba(206, 212, 218, 0.5);
-  background: rgba(248, 249, 250, 0.42);
+  background: rgba(206, 212, 218, 0.48);
   color: #212529;
 }
 
@@ -290,7 +290,7 @@ body.preload.entered .site-shell {
   background:
     radial-gradient(circle at 80% 15%, rgba(248, 249, 250, 0.28) 0 10px, transparent 12px),
     radial-gradient(circle at 16% 72%, rgba(248, 249, 250, 0.22) 0 10px, transparent 12px),
-    linear-gradient(160deg, rgba(108, 117, 125, 0.62), rgba(222, 226, 230, 0.4));
+    linear-gradient(160deg, rgba(108, 117, 125, 0.7), rgba(206, 212, 218, 0.5));
   border: 1px solid rgba(206, 212, 218, 0.4);
   box-shadow: var(--shadow);
   position: relative;
@@ -410,8 +410,8 @@ body.preload.entered .site-shell {
 }
 
 .card {
-  background: linear-gradient(170deg, rgba(108, 117, 125, 0.62) 0%, rgba(233, 236, 239, 0.42) 100%);
-  border: 1px solid rgba(248, 249, 250, 0.34);
+  background: linear-gradient(170deg, rgba(108, 117, 125, 0.72) 0%, rgba(206, 212, 218, 0.52) 100%);
+  border: 1px solid rgba(206, 212, 218, 0.5);
   border-radius: 20px;
   padding: 30px;
   box-shadow: var(--shadow);
@@ -542,7 +542,7 @@ body.preload.entered .site-shell {
 
 .contact-form,
 .contact-actions {
-  background: linear-gradient(165deg, rgba(108, 117, 125, 0.64), rgba(233, 236, 239, 0.4));
+  background: linear-gradient(165deg, rgba(108, 117, 125, 0.74), rgba(206, 212, 218, 0.52));
 }
 
 .contact-form {
@@ -559,13 +559,13 @@ body.preload.entered .site-shell {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  border: 1px solid rgba(248, 249, 250, 0.38);
+  border: 1px solid rgba(206, 212, 218, 0.52);
   border-radius: 10px;
   padding: 12px 13px;
   font-family: inherit;
   font-size: 15px;
   color: var(--white);
-  background: rgba(73, 80, 87, 0.56);
+  background: rgba(73, 80, 87, 0.68);
 }
 
 .contact-form textarea {
@@ -637,7 +637,7 @@ body.preload.entered .site-shell {
 }
 
 .about-hero {
-  background: linear-gradient(145deg, rgba(108, 117, 125, 0.62), rgba(233, 236, 239, 0.38));
+  background: linear-gradient(145deg, rgba(108, 117, 125, 0.72), rgba(206, 212, 218, 0.5));
   border-color: rgba(206, 212, 218, 0.36);
 }
 
@@ -743,7 +743,7 @@ body.preload.entered .site-shell {
 }
 
 .about-step {
-  background: linear-gradient(170deg, rgba(108, 117, 125, 0.6), rgba(233, 236, 239, 0.36));
+  background: linear-gradient(170deg, rgba(108, 117, 125, 0.72), rgba(206, 212, 218, 0.48));
 }
 
 .about-step .num {
@@ -793,7 +793,7 @@ body.preload.entered .site-shell {
 .site-footer {
   width: 100%;
   margin-top: 56px;
-  background: linear-gradient(160deg, #495057, #6c757d);
+  background: linear-gradient(160deg, #495057, #6c757d 72%, #adb5bd 100%);
   border-top: 1px solid rgba(206, 212, 218, 0.28);
 }
 
@@ -1005,7 +1005,7 @@ body.preload.entered .site-shell {
     font-size: 15px;
     padding: 10px 12px;
     border-radius: 12px;
-    background: rgba(248, 249, 250, 0.24);
+    background: rgba(206, 212, 218, 0.34);
     border-color: rgba(233, 236, 239, 0.16);
   }
 
