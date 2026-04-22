@@ -127,7 +127,7 @@ body.preload.entered .site-shell {
   border-radius: 11px;
   object-fit: cover;
   display: block;
-  border: 1px solid rgba(59, 130, 246, 0.35);
+  border: 0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
