@@ -121,12 +121,13 @@ body.preload.entered .site-shell {
   color: inherit;
 }
 
-.logo-mark {
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 1;
-  color: #3b82f6;
-  text-shadow: 0 0 20px rgba(206, 212, 218, 0.38);
+.logo-image {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
 }
 
 .logo-text {
@@ -1153,8 +1154,10 @@ body.preload.entered .site-shell {
     width: min(1120px, 94%);
   }
 
-  .logo-mark {
-    font-size: 30px;
+  .logo-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
   }
 
   .logo-text {
@@ -1178,7 +1181,13 @@ body.preload.entered .site-shell {
   }
 
   .hero-copy p {
-    font-size: clamp(18px, 5.1vw, 22px);
+    font-size: clamp(16px, 4.4vw, 19px);
+  }
+
+  .subtitle,
+  .cta p {
+    font-size: clamp(15px, 4.2vw, 18px);
+    line-height: 1.45;
   }
 
   .hero-visual {
@@ -1198,6 +1207,11 @@ body.preload.entered .site-shell {
 
   .card {
     padding: 20px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .services {
@@ -1223,6 +1237,14 @@ body.preload.entered .site-shell {
 
   .contact-send {
     font-size: clamp(18px, 5.8vw, 22px);
+  }
+
+  .about-lead {
+    font-size: 16px;
+  }
+
+  .about-body p {
+    font-size: 15.5px;
   }
 
   .contact-form textarea {
