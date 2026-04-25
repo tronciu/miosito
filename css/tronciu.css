@@ -416,7 +416,7 @@ body[data-theme="dark"] .theme-icon-moon {
   background:
     radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.9) 0%, transparent 26%),
     linear-gradient(145deg, #3f1cff 0%, #ff46c9 40%, #ff9e4a 74%, #f4f5f7 100%);
-  border: 10px solid #0a0a0a;
+  border: 8px solid #0a0a0a;
   transform:
     rotate(10deg)
     translate3d(var(--phone-x), var(--phone-y), 0)
@@ -430,7 +430,7 @@ body[data-theme="dark"] .theme-icon-moon {
 .hero-device::before {
   content: "";
   position: absolute;
-  top: 2px;
+  top: -2px;
   left: 50%;
   transform: translateX(-50%);
   width: 44%;
